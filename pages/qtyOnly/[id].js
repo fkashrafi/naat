@@ -73,7 +73,7 @@ export default function BooksEditQty({
     }
 
     async function addMeetupHandler(enterMeetupData) {
-        const responce = await fetch('http://localhost:4000/api/books', {
+        const responce = await fetch('/api/books', {
             method: 'PUT',
             body: JSON.stringify(enterMeetupData),
             headers: {
@@ -234,7 +234,7 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async (contex) => {
-    const res = await fetch(`http://localhost:4000/api/books/${contex.params.id}`);
+    const res = await fetch(`/api/books/${contex.params.id}`);
     const bookData = await res.json();
     console.log("bookData", bookData);
 

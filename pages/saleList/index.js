@@ -203,7 +203,7 @@ export default function BookList({
 
 
 export const getStaticProps = async () => {
-    const res = await fetch(`http://localhost:4000/api/sales`);
+    const res = await fetch(`/api/sales`);
     const saleList = await res.json();
     return {
         props: {

@@ -66,7 +66,7 @@ export default function Home({
     }
 
     async function addMeetupHandler(enterMeetupData) {
-        const responce = await fetch('http://localhost:4000/api/books', {
+        const responce = await fetch('/api/books', {
             method: 'POST',
             body: JSON.stringify(enterMeetupData),
             headers: {
