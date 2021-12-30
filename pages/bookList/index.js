@@ -212,7 +212,7 @@ export default function BookList({
 
 
 export const getStaticProps = async () => {
-    const res = await fetch(`/api/books`);
+    const res = await fetch(`https://naat-68wtkmm83-luvrnight-gmailcom.vercel.app/api/books`);
     const bookList = await res.json();
     return {
         props: {
@@ -220,3 +220,4 @@ export const getStaticProps = async () => {
         }
     }
 }
+// naat-68wtkmm83-luvrnight-gmailcom.vercel.app

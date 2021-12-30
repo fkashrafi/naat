@@ -66,7 +66,7 @@ export default function Home({
     }
 
     async function addMeetupHandler(enterMeetupData) {
-        const responce = await fetch('/api/books', {
+        const responce = await fetch('https://naat-68wtkmm83-luvrnight-gmailcom.vercel.app/api/books', {
             method: 'POST',
             body: JSON.stringify(enterMeetupData),
             headers: {

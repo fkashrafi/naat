@@ -73,7 +73,7 @@ export default function BooksEditQty({
     }
 
     async function addMeetupHandler(enterMeetupData) {
-        const responce = await fetch('/api/books', {
+        const responce = await fetch('https://naat-68wtkmm83-luvrnight-gmailcom.vercel.app/api/books', {
             method: 'PUT',
             body: JSON.stringify(enterMeetupData),
             headers: {
@@ -212,7 +212,7 @@ export default function BooksEditQty({
 
 //     //  // const { id } = contex.params;
 //     // // // const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
-//     // // const res = await fetch(`${server}/api/books/${id}`);
+//     // // const res = await fetch(`${server}https://naat-68wtkmm83-luvrnight-gmailcom.vercel.app/api/books/${id}`);
 //     // // const articles = await res.json();
 //     // // console.log("res edit",res);
 
@@ -234,7 +234,7 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async (contex) => {
-    const res = await fetch(`/api/books/${contex.params.id}`);
+    const res = await fetch(`https://naat-68wtkmm83-luvrnight-gmailcom.vercel.app/api/books/${contex.params.id}`);
     const bookData = await res.json();
     console.log("bookData", bookData);
 

@@ -112,7 +112,7 @@ export default function Home({
         return arr.reduce((a, b) => a + (b[key] || 0), 0);
     }
     async function updateBooksHandler(enterMeetupData) {
-        const responce = await fetch('/api/books', {
+        const responce = await fetch('https://naat-68wtkmm83-luvrnight-gmailcom.vercel.app/api/books', {
             method: 'PUT',
             body: JSON.stringify(enterMeetupData),
             headers: {
@@ -124,7 +124,7 @@ export default function Home({
     }
 
     async function addSalesHandler(enterMeetupData) {
-        const responce = await fetch('/api/sales', {
+        const responce = await fetch('https://naat-68wtkmm83-luvrnight-gmailcom.vercel.app/api/sales', {
             method: 'POST',
             body: JSON.stringify(enterMeetupData),
             headers: {
@@ -397,92 +397,92 @@ export default function Home({
 
 
 export const getStaticProps = async () => {
-    // const resBooks = await fetch(`/api/books`);
-    // const resSales = await fetch(`/api/sales`);
-    // const bookList = await resBooks.json();
-    // const saleList = await resSales.json();
+    const resBooks = await fetch(`https://naat-68wtkmm83-luvrnight-gmailcom.vercel.app/api/books`);
+    const resSales = await fetch(`https://naat-68wtkmm83-luvrnight-gmailcom.vercel.app/api/sales`);
+    const bookList = await resBooks.json();
+    const saleList = await resSales.json();
 
-    const bookList = [
-        {
-            book_name: 'aaa',
-            price: '1212',
-            qty: '2',
-            discount: '',
-            amount: '3000',
-            _id: '1',
-            author: 'ڈاکٹر عاصی کرنالی',
-            inStock: '5',
-            inStockArr: ['28/Dec/5']
-        },
-        {
-            book_name: 'bbb',
-            price: '1212',
-            qty: '2',
-            discount: '',
-            amount: '3000',
-            _id: '2',
-            author: 'ڈاکٹر عاصی کرنالی',
-            inStock: '5',
-            inStockArr: ['28/Dec/5']
-        },
-        {
-            book_name: 'ccc',
-            price: '1212',
-            qty: '2',
-            discount: '',
-            amount: '3000',
-            _id: '3',
-            author: 'ڈاکٹر عاصی کرنالی',
-            inStock: '5',
-            inStockArr: ['28/Dec/5']
-        },
-        {
-            book_name: 'ddd',
-            price: '1212',
-            qty: '2',
-            discount: '',
-            amount: '3000',
-            _id: '4',
-            author: 'ڈاکٹر عاصی کرنالی',
-            inStock: '5',
-            inStockArr: ['28/Dec/5']
-        },
-        {
-            book_name: 'eee',
-            price: '1212',
-            qty: '2',
-            discount: '',
-            amount: '3000',
-            _id: '5',
-            author: 'ڈاکٹر عاصی کرنالی',
-            inStock: '5',
-            inStockArr: ['28/Dec/5']
-        }
-    ];
+    // const bookList = [
+    //     {
+    //         book_name: 'aaa',
+    //         price: '1212',
+    //         qty: '2',
+    //         discount: '',
+    //         amount: '3000',
+    //         _id: '1',
+    //         author: 'ڈاکٹر عاصی کرنالی',
+    //         inStock: '5',
+    //         inStockArr: ['28/Dec/5']
+    //     },
+    //     {
+    //         book_name: 'bbb',
+    //         price: '1212',
+    //         qty: '2',
+    //         discount: '',
+    //         amount: '3000',
+    //         _id: '2',
+    //         author: 'ڈاکٹر عاصی کرنالی',
+    //         inStock: '5',
+    //         inStockArr: ['28/Dec/5']
+    //     },
+    //     {
+    //         book_name: 'ccc',
+    //         price: '1212',
+    //         qty: '2',
+    //         discount: '',
+    //         amount: '3000',
+    //         _id: '3',
+    //         author: 'ڈاکٹر عاصی کرنالی',
+    //         inStock: '5',
+    //         inStockArr: ['28/Dec/5']
+    //     },
+    //     {
+    //         book_name: 'ddd',
+    //         price: '1212',
+    //         qty: '2',
+    //         discount: '',
+    //         amount: '3000',
+    //         _id: '4',
+    //         author: 'ڈاکٹر عاصی کرنالی',
+    //         inStock: '5',
+    //         inStockArr: ['28/Dec/5']
+    //     },
+    //     {
+    //         book_name: 'eee',
+    //         price: '1212',
+    //         qty: '2',
+    //         discount: '',
+    //         amount: '3000',
+    //         _id: '5',
+    //         author: 'ڈاکٹر عاصی کرنالی',
+    //         inStock: '5',
+    //         inStockArr: ['28/Dec/5']
+    //     }
+    // ];
 
-    const saleList = [
-        {
-            _id: '123456',
-            c_name: 'fahad',
-            c_number: '12121',
-            date: '12-12-2021',
-            invoice_num: '001',
-            book_list: [
-                {
-                    book_name: 'rrrr',
-                    price: '1212',
-                    qty: '2',
-                    discount: '',
-                    amount: '3000',
-                    _id: '1234556',
-                    author: 'ڈاکٹر عاصی کرنالی',
-                    inStock: '5',
-                    inStockArr: ['28/Dec/5']
-                }
-            ]
-        }
+    // const saleList = [
+    //     {
+    //         _id: '123456',
+    //         c_name: 'fahad',
+    //         c_number: '12121',
+    //         date: '12-12-2021',
+    //         invoice_num: '001',
+    //         book_list: [
+    //             {
+    //                 book_name: 'rrrr',
+    //                 price: '1212',
+    //                 qty: '2',
+    //                 discount: '',
+    //                 amount: '3000',
+    //                 _id: '1234556',
+    //                 author: 'ڈاکٹر عاصی کرنالی',
+    //                 inStock: '5',
+    //                 inStockArr: ['28/Dec/5']
+    //             }
+    //         ]
+    //     }
 
-    ]
+    // ]
 
     return {
         props: {
